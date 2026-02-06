@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="" />
+    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,18 +19,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Remy0011"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Remy0011&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Remy0011/Stock2MGR",
-    "accountId": "c1861ca8-b714-43bc-b223-55e6811d4323"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Remy0011/Stock2MGR&quot;,
+    &quot;accountId&quot;: &quot;c1861ca8-b714-43bc-b223-55e6811d4323&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$USER_HOME$/scoop/shims/php.exe">
     <include_path>
@@ -174,7 +176,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/rdeib/OneDrive/Desktop/MVC/MVC Stock2MGR/Stock2MGR&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -209,6 +211,8 @@
       <workItem from="1769769266180" duration="587000" />
       <workItem from="1769769868246" duration="883000" />
       <workItem from="1770204264641" duration="574000" />
+      <workItem from="1770295446512" duration="1591000" />
+      <workItem from="1770363386174" duration="3142000" />
     </task>
     <servers />
   </component>
