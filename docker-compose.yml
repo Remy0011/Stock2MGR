@@ -1,99 +1,34 @@
-# =============================================================================
-# Docker Compose - Environnement SQL (MySQL + phpMyAdmin)
-# Auteur : Jordan STIEN (2026)
-# Formation : Développeur Web et Web Mobile - BAC+1
-# =============================================================================
-# Ce fichier permet de démarrer l'environnement SQL uniquement :
-# - MySQL 8.0 (base de données relationnelle)
-# - phpMyAdmin (interface web pour MySQL)
-# =============================================================================
-# UTILISATION :
-# 1. Ouvrir un terminal dans ce dossier
-# 2. Lancer : docker-compose up -d
-# 3. Accéder à phpMyAdmin : http://localhost:8080
-# =============================================================================
+# Symfony .env :
+# DATABASE_URL="mysql://dbuser:dbpassword@127.0.0.1:33060/app?serverVersion=8.0"
 
 services:
-  # ===========================================================================
-  # MySQL - Base de données relationnelle
-  # ===========================================================================
-  # MySQL est le SGBD relationnel que nous utiliserons pour apprendre le SQL.
-  # Les données sont persistées dans un volume Docker pour ne pas être perdues.
   mysql:
-    image: mysql:8.0                    # Version 8.0 de MySQL (LTS)
-    container_name: mysql_formation     # Nom du conteneur pour identification facile
-    restart: unless-stopped             # Redémarre automatiquement sauf arrêt manuel
-    environment:
-      MYSQL_ROOT_PASSWORD: root         # Mot de passe administrateur (à changer en prod!)
-      MYSQL_DATABASE: symfony           # Base de données créée automatiquement
-      MYSQL_USER: stagiaire             # Utilisateur pour la formation
-      MYSQL_PASSWORD: formation2026     # Mot de passe de l'utilisateur stagiaire
-    ports:
-      - "3306:3306"                     # Port MySQL accessible sur localhost:3306
-    volumes:
-      - mysql_data:/var/lib/mysql       # Persistance des données
-    networks:
-      - sql_network
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # ===========================================================================
-  # phpMyAdmin - Interface web pour MySQL
-  # ===========================================================================
-  # phpMyAdmin permet de gérer MySQL via une interface web intuitive.
-  # Accessible sur http://localhost:8080
-  phpmyadmin:
-    image: phpmyadmin:latest            # Dernière version de phpMyAdmin
-    container_name: phpmyadmin_formation
+    image: mysql:8.0
+    container_name: mysql_app
     restart: unless-stopped
     environment:
-      PMA_HOST: mysql                   # Nom du service MySQL à contacter
-      PMA_PORT: 3306                    # Port MySQL
-      PMA_USER: root                    # Connexion automatique en root
-      PMA_PASSWORD: root                # Mot de passe root
-      UPLOAD_LIMIT: 100M                # Limite d'upload pour les imports SQL
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpassword
     ports:
-      - "8080:80"                       # Accessible sur http://localhost:8080
-    depends_on:
-      mysql:
-        condition: service_healthy      # Attend que MySQL soit prêt
-    networks:
-      - sql_network
+      - "33060:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
 
-# =============================================================================
-# Volumes - Stockage persistant des données
-# =============================================================================
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma_app
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: dbuser
+      PMA_PASSWORD: dbpassword
+    ports:
+      - "8090:80"
+    depends_on:
+      - mysql
+
 volumes:
   mysql_data:
-    name: formation_mysql_data
-
-# =============================================================================
-# Réseau
-# =============================================================================
-networks:
-  sql_network:
-    name: formation_sql_network
-    driver: bridge
-
-# =============================================================================
-# COMMANDES UTILES
-# =============================================================================
-# Démarrer :              docker-compose up -d
-# Arrêter :               docker-compose down
-# Voir les logs :         docker-compose logs -f
-# Voir les logs MySQL :   docker-compose logs -f mysql
-# Redémarrer MySQL :      docker-compose restart mysql
-# Supprimer les données : docker-compose down -v
-# =============================================================================
-# ACCÈS
-# =============================================================================
-# phpMyAdmin : http://localhost:8080
-#              Login: root / root
-#              OU     stagiaire / formation2026
-# =============================================================================
-# MySQL CLI (optionnel) :
-# docker exec -it mysql_formation mysql -uroot -proot
-# =============================================================================
