@@ -1,0 +1,44 @@
+{#
+    Vue : Liste des stocks
+    Contrôleur : StockController::index()
+    Route : /stock (app_stock_index)
+
+    Affiche la liste des produits en stock sous forme de tableau.
+    Le contenu HTML sera complété par l'équipe front-end.
+#}
+{% extends 'base.html.twig' %}
+
+{% block title %}Stock - {{ appName }}{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1>Gestion des stocks</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in stocks %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.price }} &euro;</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">Aucun produit en stock.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><a href="{{ path('app_home') }}">Retour à l'accueil</a></p>
+</div>
+{% endblock %}

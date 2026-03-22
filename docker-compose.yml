@@ -1,0 +1,34 @@
+# Symfony .env :
+# DATABASE_URL="mysql://dbuser:dbpassword@127.0.0.1:33060/app?serverVersion=8.0"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_app
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpassword
+    ports:
+      - "33060:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma_app
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: dbuser
+      PMA_PASSWORD: dbpassword
+    ports:
+      - "8090:80"
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

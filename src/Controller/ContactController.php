@@ -2,15 +2,29 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class ContactController extends AbstractController
+/**
+ * Contrôleur de la page de contact.
+ *
+ * Gère l'affichage du formulaire de contact de l'application.
+ * Étend BaseController pour bénéficier des fonctionnalités communes.
+ */
+final class ContactController extends BaseController
 {
+    /**
+     * Affiche la page de contact.
+     *
+     * Route : GET /contact-us
+     * Nom   : app_contact
+     *
+     * @return Response La réponse HTTP contenant la page de contact
+     */
     #[Route('/contact-us', name: 'app_contact')]
     public function index(): Response
     {
-        return $this->render('contact/index.html.twig');
+        // Rendu du template contact sans données supplémentaires
+        return $this->renderView('contact/index.html.twig');
     }
 }
