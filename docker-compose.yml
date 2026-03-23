@@ -2,33 +2,48 @@
 # DATABASE_URL="mysql://dbuser:dbpassword@127.0.0.1:33060/app?serverVersion=8.0"
 
 services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql_app
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: app
-      MYSQL_USER: dbuser
-      MYSQL_PASSWORD: dbpassword
-    ports:
-      - "33060:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
+    mysql:
+        image: mysql:8.0
+        container_name: mysql_app
+        restart: unless-stopped
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: app
+            MYSQL_USER: dbuser
+            MYSQL_PASSWORD: dbpassword
+        ports:
+            - "33060:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: pma_app
-    restart: unless-stopped
-    environment:
-      PMA_HOST: mysql
-      PMA_PORT: 3306
-      PMA_USER: dbuser
-      PMA_PASSWORD: dbpassword
-    ports:
-      - "8090:80"
-    depends_on:
-      - mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: pma_app
+        restart: unless-stopped
+        environment:
+            PMA_HOST: mysql
+            PMA_PORT: 3306
+            PMA_USER: dbuser
+            PMA_PASSWORD: dbpassword
+        ports:
+            - "8090:80"
+        depends_on:
+            - mysql
+
+    app:
+        build: .
+        container_name: symfony_app
+        restart: unless-stopped
+        ports:
+            - "8000:8000"  # This maps host:container port
+        depends_on:
+            - mysql
+        volumes:
+            - .:/app  # Mount your local code
+        # You might need to add environment variables here
+        # environment:
+        #   - APP_ENV=dev
+        #   - APP_DEBUG=1
 
 volumes:
-  mysql_data:
+    mysql_data:
