@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="prob cache solve">
-      <change afterPath="$PROJECT_DIR$/src/Controller/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/StockMvmtController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/StockMvmt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/StockMvmtRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/AlertService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/StockService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/movement/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/movement/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product/alerts.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product/form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
+    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="Architecture MVC Files and Dir">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/AlertService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/AlertService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/StockService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/StockService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +239,7 @@
       <workItem from="1774334629967" duration="3402000" />
       <workItem from="1774338503151" duration="782000" />
       <workItem from="1774341138610" duration="2365000" />
-      <workItem from="1774343874361" duration="3705000" />
+      <workItem from="1774343874361" duration="4429000" />
     </task>
     <task id="LOCAL-00001" summary="DOCKER-Compose-yml">
       <option name="closed" value="true" />
@@ -295,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774346643119</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Architecture MVC Files and Dir">
+      <option name="closed" value="true" />
+      <created>1774350740863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774350740863</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +300,7 @@
     <MESSAGE value="DOCKER-Compose-yml updated" />
     <MESSAGE value="Symfony repared" />
     <MESSAGE value="prob cache solve" />
-    <option name="LAST_COMMIT_MESSAGE" value="prob cache solve" />
+    <MESSAGE value="Architecture MVC Files and Dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="Architecture MVC Files and Dir" />
   </component>
 </project>
