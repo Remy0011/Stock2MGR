@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="">
+    <list default="true" id="ed364e9c-a193-414b-84da-8e51657aa87b" name="Changes" comment="Symfony repared">
+      <change afterPath="$PROJECT_DIR$/src/Service/WheatherService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +20,13 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,6 +177,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="38yL9jaiZ5uhuKozF4x9YIBsZub" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -178,7 +193,7 @@
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rdeib/OneDrive/Desktop/MVC/MVC Stock2MGR/Stock2MGR&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/Stock2MGR&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -212,11 +227,60 @@
       <workItem from="1769769868246" duration="883000" />
       <workItem from="1770204264641" duration="574000" />
       <workItem from="1770295446512" duration="1591000" />
-      <workItem from="1770363386174" duration="3142000" />
+      <workItem from="1770363386174" duration="7036000" />
+      <workItem from="1771599413418" duration="2635000" />
+      <workItem from="1772715109760" duration="14000" />
+      <workItem from="1773301447888" duration="132000" />
+      <workItem from="1773302006736" duration="840000" />
+      <workItem from="1774250178586" duration="10239000" />
+      <workItem from="1774264854031" duration="1158000" />
+      <workItem from="1774334629967" duration="3402000" />
+      <workItem from="1774338503151" duration="782000" />
+      <workItem from="1774341138610" duration="2365000" />
+      <workItem from="1774343874361" duration="793000" />
     </task>
+    <task id="LOCAL-00001" summary="DOCKER-Compose-yml">
+      <option name="closed" value="true" />
+      <created>1770372019146</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770372019146</updated>
+    </task>
+    <task id="LOCAL-00002" summary="DOCKER-Compose-yml">
+      <option name="closed" value="true" />
+      <created>1770372029854</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770372029854</updated>
+    </task>
+    <task id="LOCAL-00003" summary="DOCKER-Compose-yml updated">
+      <option name="closed" value="true" />
+      <created>1770375413795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1770375413795</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Symfony repared">
+      <option name="closed" value="true" />
+      <created>1774253053116</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1774253053116</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DOCKER-Compose-yml" />
+    <MESSAGE value="DOCKER-Compose-yml updated" />
+    <MESSAGE value="Symfony repared" />
+    <option name="LAST_COMMIT_MESSAGE" value="Symfony repared" />
   </component>
 </project>
